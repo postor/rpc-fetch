@@ -27,6 +27,10 @@ let ping:()=>Promise<string> = client.getMethod('ping')
 console.log(await pong())
 ```
 
+codesandbox:
+
+https://codesandbox.io/s/frosty-field-c2h0ex?file=/pages/api/getGreeting.js
+
 ## rules | 规则
 
 - API return json contain `error` if fail (rpc will throw) and `data` (rpc return value)  
