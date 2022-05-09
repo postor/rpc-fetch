@@ -5,6 +5,16 @@ make fetch calls just like calling backend functions | 像调用函数一样进�
 ## usage | 使用方法
 
 ```
+import RpcFetch from 'rpc-fetch'
+let client = new RpcFetch(bathPath)
+let rpc = client.getMethod(relativePath)
+
+let rtn = await rpc(param1,param2,....)
+```
+
+example | 使用示例
+
+```
 // backend example
 app.post('/ping', res=>res.json("pong"))
 ```
@@ -19,8 +29,8 @@ console.log(await pong())
 
 ## rules | 规则
 
-- 
-- 
+- API return json contain `error` if fail (rpc will throw) and `data` (rpc return value)  
+- path map to http method | 路径映射到 http 方法
 
 
 path map to http method | 路径映射到 http 方法
